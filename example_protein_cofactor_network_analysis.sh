@@ -55,14 +55,14 @@ aux_inds=input_data/auxiliary_prot_inds.txt	# Residue indices of auxiliary subun
 if [ $compute_prot_cmap -eq 1 ] 
 then
 	# 1.a Compute the protein contact map.
-	python ${pypath}run_contact_map.py -top ${top_file} -trj ${trajs[@]} -fe ${file_end_name} -od ${out_dir} -dt ${dt} 
+	python run_contact_map.py -top ${top_file} -trj ${trajs[@]} -fe ${file_end_name} -od ${out_dir} -dt ${dt} 
 fi
 
 
 if [ ${compute_cofactor_prot_cmap} -eq 1 ]
 then
 	# 1.b Compute the cofactor contribution to the contact map.
-	python ${pypath}run_cofactor_interactors.py -top ${top_file} -trj ${trajs[@]} -fe ${file_end_name} \
+	python run_cofactor_interactors.py -top ${top_file} -trj ${trajs[@]} -fe ${file_end_name} \
 		-od ${out_dir} -dt ${dt} -cofactor_domain_sel ${cofactor_domain_sel} -dt ${dt}
 
 fi
@@ -76,7 +76,7 @@ then
 	# We also supply the cofactor coordinates and permutation indices computed in the previous step
 	# to avoid redoing this.
 
-	python ${pypath}run_cofactor_interactors.py -top ${top_file} -trj ${trajs[@]} \
+	python run_cofactor_interactors.py -top ${top_file} -trj ${trajs[@]} \
 		-fe ${file_end_name} -od ${out_dir} -dt ${dt} \
 		-cofactor_coords ${out_dir}cofactor_interactor_coords_${file_end_name}.npy \
 		-cofactor_inds ${out_dir}cofactor_interactor_indices_${file_end_name}.npy \
