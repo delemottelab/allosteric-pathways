@@ -13,7 +13,16 @@ Dependencies:
 * Biopandas: http://rasbt.github.io/biopandas/
 * LAP (for lipid-protein networks): https://github.com/gatagat/lap
 
-See tutorial for more information and references.
+See tutorial for more information.
+
+**Citing this work**
+The code and developments are described in two papers.
+
+[1] P.W. Kang, A.M. Westerlund, J. Shi, K. MacFarland White, A.K. Dou, A.H. Cui, J.R. Silva, L. Delemotte and J. Cui.
+Calmodulin acts as a state-dependent switch to control a cardiac potassium channel opening. 2020
+
+[2] A.M. Westerlund, O. Fleetwood, S. Perez-Conesa and L. Delemotte.
+Network analysis reveals how lipids and other cofactors influence membrane protein allostery. 2020
 
 ----------------------------------------------------------
 Annie Westerlund, KTH Royal Institute of Technology, 2020 </br>
