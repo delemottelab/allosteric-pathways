@@ -15,7 +15,7 @@ Dependencies:
 
 See tutorial for more information.
 
-**Citing this work**
+**Citing this work**<br>
 The code and developments are described in two papers.
 
 [1] P.W. Kang, A.M. Westerlund, J. Shi, K. MacFarland White, A.K. Dou, A.H. Cui, J.R. Silva, L. Delemotte and J. Cui.
