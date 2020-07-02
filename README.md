@@ -2,7 +2,7 @@
 
 This repository contains a jupyter notebook tutorial together with the necessary information and code for extracting allosteric pathways in proteins, including multimeric proteins and protein complexes.
 
-The calculations can also be done via command line as demonstrated in *example_analysis.sh*.
+The calculations can also be done via command line as demonstrated in *example_protein_cofactor_network_analysis.sh*.
 
 Dependencies:
 * Python 3.6
