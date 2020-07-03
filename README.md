@@ -11,7 +11,7 @@ Dependencies:
 * Matplotlib
 * Mdtraj: http://mdtraj.org/1.9.3/
 * Biopandas: http://rasbt.github.io/biopandas/
-* LAP (for lipid-protein networks): https://github.com/gatagat/lap
+* LAPJV (for lipid-protein networks): https://github.com/gatagat/lap
 
 See tutorial for more information.
 
