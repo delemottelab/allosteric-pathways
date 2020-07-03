@@ -162,7 +162,7 @@ class ContactMap():
 				np.save(self.out_directory_ + 'distance_matrices_semi_bin_frame_'+str(i_frame)+'_'+self.file_end_name_+'.npy', squareform(self.cmap_))
 		else:
 			self.cmap_ = np.zeros((self.n_residues_, self.n_residues_))
-			Parallel(n_jobs=28, backend="threading")(
+			Parallel(n_jobs=self.n_cores_, backend="threading")(
 				delayed(unwrap_cmap_semi_bin_loop)(i) for i in zip([self] * self.n_residues_, range(self.n_residues_)))
 
 			# Save distance matrix to file
