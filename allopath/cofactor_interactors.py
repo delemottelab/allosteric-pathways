@@ -221,7 +221,7 @@ class CofactorInteractors():
 			is_wrong=True
 		return min_distance, is_wrong
 
-	def _compute_mean_PBC(self, coords, unitcell_sizes, do_plot=False):
+	def _compute_mean_PBC(self, coords, unitcell_sizes):
 		"""
 		Compute the centroid of an interactor along the trajectory.
 		OBS: Assumes an orthorhombic box.
@@ -260,24 +260,6 @@ class CofactorInteractors():
 
 		# Get component centroid
 		centroid = np.mean(image_coords[component_indices == 1, :], axis=0)
-
-		if do_plot:
-			cluster_points = image_coords[component_indices == 1, :]
-			non_cluster_points = image_coords[component_indices == 0, :]
-			point_distances = cdist(centroid[np.newaxis, :], cluster_points)
-			if np.max(point_distances)>2:
-
-				# Plot clusters
-				import matplotlib.pyplot as plt
-				from mpl_toolkits.mplot3d import Axes3D
-
-				fig = plt.figure(1)
-				ax = fig.add_subplot(111, projection='3d')
-				cluster_points = image_coords[component_indices==1,:]
-				ax.scatter(non_cluster_points[:,0],non_cluster_points[:,1],non_cluster_points[:,2],c=[[0.7,0.7,0.7]],s=30)
-				ax.scatter(cluster_points[:, 0], cluster_points[:, 1], cluster_points[:, 2], c='k', s=30)
-				ax.scatter(centroid[0],centroid[1],centroid[2],marker='s',c='r',s=90)
-				plt.show()
 
 		# Return the centroid
 		return centroid
