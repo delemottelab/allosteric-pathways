@@ -99,10 +99,10 @@ then
 		echo $i_block
 		python run_mutual_information.py -top ${top_file} -trj ${trajs[@]} -fe ${file_end_name} \
 			-od $out_dir_MI -dt ${dt} -n ${n_cores} -i_block $i_block -n_blocks_col 4 \
-			-cmap ${out_dir}distance_matrix_semi_bin_${file_end_name}.txt -n_splits \
+			-cmap ${out_dir}distance_matrix_semi_bin_${file_end_name}.txt \
 			-aif ${out_dir}interactor_centroid_fluctuations_${file_end_name}.npy \
 			-aipc ${out_dir}cofactor_protein_residue_semi_binary_cmap_${file_end_name}.npy \
-			$n_bootstraps 
+			-n_splits $n_bootstraps 
 	done
 	
 	# When the contact map is used as input, we might need to compute the MI the matrix diagonal. 
